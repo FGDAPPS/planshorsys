@@ -1,0 +1,73 @@
+  div.title {
+      background-color: #1B2F62;
+      /* width: 50%; */
+  }
+
+  div.formulaire {
+      background-color: lightgray;
+      width: 70%;
+      /* margin-bottom: 10%; */
+  }
+
+  h1 {
+      color: white;
+  }
+
+  li {
+      margin-left: 5%;
+  }
+
+  input.inputRadio {
+      margin-left: 10%;
+  }
+
+  select.formSelect {
+      margin-left: 10%;
+      width: 20%;
+  }
+
+  input.formInput {
+      margin-left: 10%;
+      width: 20%;
+  }
+
+  textarea.formInput {
+      margin-left: 10%;
+      margin-bottom: 5%;
+      width: 20%;
+  }
+
+  ul {
+      list-style-type: none;
+      margin-bottom: 3%;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: 70%;
+  }
+
+  li.menu {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+      background-color: #04AA6D;
+  }
+
+  .active {
+      background-color: #04AA6D;
+  }
+
+  img.logo {
+      /* margin-left: 1%;
+      margin-TOP: 1%;
+      margin-right: 3%; */
+  }

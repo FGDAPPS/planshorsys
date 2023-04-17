@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+		
+        <meta charset="utf-8" />
+        <title>Formulaire actif</title>
+		<script src="JS/regexp.js"></script>
+		<script src="JS/passVerif.js"></script>
+		<script src="JS/forms.js"></script>
+		<link rel="stylesheet" href="CSS/forms.css" />
+		<link rel="stylesheet" href="CSS/design.css" />
+		
+		<script>
+			//Change the color of the bar
+			// function change(id, val)
+			// {
+			// 	if(val == 0)
+			// 		document.getElementById(id).style.backgroundColor = "#dd0000";
+			// 	else if(val == 1)
+			// 		document.getElementById(id).style.backgroundColor = "#70b500";
+			// 	else
+			// 		document.getElementById(id).style.backgroundColor = "#ffc500";
+			// }
+			function yesnoCheck(that) {
+    if (that.value == "qte") {
+        document.getElementById("ifYes").style.display = "block";
+    } else {
+        document.getElementById("ifYes").style.display = "none";
+    }
+     if (that.value == "ca") {
+        document.getElementById("ca").style.display = "block";
+    } else {
+        document.getElementById("ca").style.display = "none";
+    }
+
+}
+	function sourceCheck(that) {
+    if (that.value == "produit") {
+        document.getElementById("produit").style.display = "block";
+    } else {
+        document.getElementById("produit").style.display = "none";
+    }
+     if (that.value == "marque") {
+        document.getElementById("marque").style.display = "block";
+    } else {
+        document.getElementById("marque").style.display = "none";
+    }
+
+}
+		</script>
+		
+    </head>
+	
+    <body>
+		
+		<form method="post" action="">
+	Choix du type du plan:<select name="type" onchange="yesnoCheck(this);">
+    <option value=""></option>
+    <option value="ca">Chiffre d'affaire</option>
+    <option value="qte">Quantité</option>
+   
+</select>
+
+<div id="ifYes" style="display: none;">
+Par :<select name="Par" onchange="sourceCheck(this);">
+    <option value=""></option>
+    <option value="produit">Produit</option>
+    <option value="marque">Marque</option>
+   
+</select>
+</div>
+<!-- <div id="ifYes" style="display: none;">
+    <label for="car">FROM CA</label> <input type="text" id="car" name="car" /><br />
+</div>
+<div id="ca" style="display: none;">
+    <label for="car">FROM QTE</label> <input type="text" id="car" name="car" /><br />
+</div> -->
+
+<div id="produit" style="display: none;">
+ Articles:  <select name="article" onchange="">
+    <option  value=""></option>
+    <option value="produit">CPF23DALSCO</option>
+    <option value="marque">CNGDALCOUHC20</option>
+   
+</select>
+</div>
+<div id="marque" style="display: none;">
+Marque<select name="marque" onchange="">
+    <option value=""></option>
+    <option value="produit">Dalaa</option>
+    <option value="marque">Pandoo</option>
+   
+</select>
+
+</div>
+
+<input type="submit" name="submit" value="valider">
+		</form>
+		<?php 
+
+		if(isset($_POST['submit'])) {
+$type=$_POST['type'];
+$Par=$_POST['Par'];
+$article=$_POST['article'];
+$marque=$_POST['marque'];
+
+echo $type.$Par.$article.$marque;
+}
+		?>
+
+		
+
+		<script>
+			// var pseudo = document.getElementById("pseudo");
+			// var mdp = document.getElementById("mdp");
+			// var mdp2 = document.getElementById("mpd2");
+			// var mail = document.getElementById("mail");
+			// var nom = document.getElementById("nom");
+			// var cp = document.getElementById("cp");		
+		</script>
+    </body>
+</html>
